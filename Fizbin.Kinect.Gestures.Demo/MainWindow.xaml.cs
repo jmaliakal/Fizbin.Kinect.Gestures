@@ -195,6 +195,11 @@ namespace Fizbin.Kinect.Gestures.Demo
             swipeDownSegments[1] = new SwipeDownSegment2();
             swipeDownSegments[2] = new SwipeDownSegment3();
             gestureController.AddGesture("SwipeDown", swipeDownSegments);
+
+            IRelativeGestureSegment[] leanleftSegments = new IRelativeGestureSegment[2];
+            leanleftSegments[0] = new LeanLeftSegment1();
+            leanleftSegments[1] = new LeanLeftSegment2();
+            gestureController.AddGesture("LeanLeft", leanleftSegments);
         }
 
         #region Properties
@@ -283,6 +288,9 @@ namespace Fizbin.Kinect.Gestures.Demo
                     break;
                 case "ZoomOut":
                     Gesture = "Zoom Out";
+                    break;
+                case "LeanLeft"
+                    Gesture = "Lean Left";
                     break;
 
                 default:
